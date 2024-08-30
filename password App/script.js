@@ -10,6 +10,8 @@ let inpuLength = 4
 
 inputReage.addEventListener('input', (event) => {
     inpuLength = event.target.value
+
+    document.querySelector('.showLength').innerHTML = inpuLength
     Generate()
 })
 
@@ -49,6 +51,8 @@ generateBtn.addEventListener('click', () => {
 })
 
 copy.addEventListener('click', () => {
-    console.log("btn working");
-    
-})
+    let passwordField = document.querySelector('#passwordField')
+    passwordField.select();
+    document.execCommand('copy')
+    alert("text Copied")
+})      
